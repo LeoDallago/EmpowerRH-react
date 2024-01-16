@@ -16,12 +16,13 @@ const useStyles = makeStyles(() => ({
     root: {
         display: 'flex',
         direction: 'column',
-        justifyContent: 'flex-end',
+        justifyContent: 'center',
         alignItems: 'center',
     },
     card: {
         width: 400,
         padding: 10,
+        margin: 20,
     },
     textField: {
         width: '90%',
@@ -69,23 +70,23 @@ function Pesquisar() {
                     resultado.map(resultados => (
                         <Card className={classes.card}>
                             <CardContent>
-                                <Typography>
-                                    <h2>Nome: {resultados.name}</h2>
+                                <Typography variant="h5">
+                                    Nome: {resultados.name}
                                 </Typography>
-                                <Typography>
-                                    <h2>Nascimento:{resultados.birthday}</h2>
+                                <Typography variant="h5">
+                                    Nascimento:{resultados.birthday}
                                 </Typography>
-                                <Typography>
-                                    <h2>Telefone: {resultados.phone}</h2>
+                                <Typography variant="h5">
+                                    Telefone: {resultados.phone}
                                 </Typography>
-                                <Typography>
-                                    <h2>Estado Civil: {resultados.marital_status}</h2>
+                                <Typography variant="h5">
+                                    Estado Civil: {resultados.marital_status}
                                 </Typography>
-                                <Typography>
-                                    <h2>Cargo: {resultados.responsibility}</h2>
+                                <Typography variant="h5">
+                                    Cargo: {resultados.responsibility}
                                 </Typography>
-                                <Typography>
-                                    <h2>Departamento: {resultados.department}</h2>
+                                <Typography variant="h5">
+                                    Departamento: {resultados.department}
                                 </Typography>
                             </CardContent>
                         </Card>
