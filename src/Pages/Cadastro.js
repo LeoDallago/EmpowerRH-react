@@ -132,7 +132,7 @@ const Cadastro = () => {
                     <CardContent>
                         <Typography variant="h5">Cadastrar Funcionario</Typography>
                         <TextField id="standard-basic" label="Nome" name="name" value={name} onChange={e => setName(e.target.value)} className={classes.textField} />
-                        <TextField id="date" type="date" label="Data de nascimento" name="birthday" value={birthday} onChange={e => setBirthday(e.target.value)} className={classes.textField} />
+                        <TextField id="date" type="date" label="Data de nascimento" name="birthday" value={birthday} onChange={e => setBirthday(e.target.value)} className={classes.textField} InputLabelProps={{ shrink: true }} />
                         <TextField id="standard-basic" select label="Genero" name="gender" value={gender} onChange={e => setGender(e.target.value)} className={classes.textField}>
                             {generos.map((option) => (
                                 <MenuItem key={option.value} value={option.value}>
