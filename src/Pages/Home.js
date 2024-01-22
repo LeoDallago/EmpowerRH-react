@@ -42,7 +42,6 @@ const useStyles = makeStyles(() => ({
     }
 }))
 const Home = () => {
-    const [open, setOpen] = useState(false)
     const classes = useStyles()
     const history = useHistory()
 
@@ -50,13 +49,6 @@ const Home = () => {
         history.push(route)
     }
 
-    const toggleOpen = () => {
-        setOpen(true)
-    }
-
-    const toggleClose = () => {
-        setOpen(false)
-    }
     return (
         <div>
             <AppBar>
@@ -92,26 +84,12 @@ const Home = () => {
                             <Button onClick={() => togglePage('/listar')}>
                                 <ListOutlinedIcon fontSize="small" className={classes.icon} />  Listar
                             </Button>
-                            <Button onClick={toggleOpen}>
+                            <Button onClick={() => togglePage('/ferias')}>
                                 <BatteryCharging30RoundedIcon fontSize="small" className={classes.icon} />  Solicitar ferias
                             </Button>
                         </ButtonGroup>
                     </CardContent>
                 </Card>
-
-
-                <Dialog
-                    open={open}
-                    onClose={toggleClose}
-                >
-                    <DialogTitle>Aviso!</DialogTitle>
-                    <DialogContentText variant="body2">
-                        Pagina não disponivel
-                    </DialogContentText>
-                    <DialogActions>
-                        <Button variant="contained" color="primary" onClick={toggleClose}>Ok</Button>
-                    </DialogActions>
-                </Dialog>
             </Container>
         </div >
     )

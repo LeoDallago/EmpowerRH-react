@@ -11,6 +11,7 @@ import Cadastro from './Pages/Cadastro';
 import Remover from './Pages/Remover';
 import Pesquisar from './Pages/Pesquisa';
 import Listar from './Pages/Listar';
+import Ferias from './Pages/Ferias'
 
 function App() {
 
@@ -18,6 +19,9 @@ function App() {
     <div>
       <Router>
         <Switch>
+          <Route path='/ferias'>
+            <Ferias />
+          </Route>
           <Route path='/listar'>
             <Listar />
           </Route>
