@@ -48,7 +48,7 @@ function Pesquisar() {
                 .then(data => {
                     setResultado(data)
                 })
-                .catch(err => alert('Erro ao buscar Colaborador', err))
+                .catch(err => alert('Erro na busca do Colaborador', err))
         }
     }
 
