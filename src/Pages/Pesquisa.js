@@ -40,13 +40,16 @@ function Pesquisar() {
     const classes = useStyles()
 
     const handleSend = () => {
-        fetch(`http://localhost:8080/api/employees/${nome}`)
-            .then(response => response.json())
-            .then(data => {
-                setResultado(data)
-
-            })
-        console.log(resultado)
+        if (nome === '') {
+            alert('Por favor, insira um nome')
+        } else {
+            fetch(`http://localhost:8080/api/employees/${nome}`)
+                .then(response => response.json())
+                .then(data => {
+                    setResultado(data)
+                })
+                .catch(err => alert('Erro ao buscar Colaborador', err))
+        }
     }
 
     return (
